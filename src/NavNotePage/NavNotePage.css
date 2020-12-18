@@ -1,0 +1,27 @@
+.NavNotePage {
+    margin: 150px 0 0;
+}
+
+h3 {
+    text-align: center;
+    font-size: 25px;
+    color: #312d2bd2;
+}
+
+.goBack {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+    background-color: #c9c1c3e7;
+    font-size: 16px;
+    border: solid;
+    border-width: 1px;
+    color: #36302d;
+}
+
+.goBack:hover {
+    color: #742647;
+    cursor: pointer;
+}

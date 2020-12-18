@@ -1,0 +1,47 @@
+.NavMain ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 150px 0 0;
+}
+
+.NavMain_folder {
+    background-color: #d9899ee7;
+    color: #312d2bf3;
+    display: block;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 300px;
+    padding: 18px 16px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.addFolder {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+    background-color: #c9c1c3e7;
+    border: solid;
+    text-decoration: none;
+    border-width: 1px;
+    color: #36302d;
+    text-align: center;
+    font-size: 16px;
+}
+
+.addFolder:hover {
+    color: #742647;
+    cursor: pointer;
+}
+
+.NavMain_folder.active {
+    background-color: #4089e9bb;
+}
+
+.NavMain_folder:hover {
+    color: #0a3a81d2;
+}

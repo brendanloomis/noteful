@@ -1,0 +1,49 @@
+.Note {
+    background-color: #d9899ee7;
+    height: 100px;
+    margin: 10px auto;
+    width: 700px;
+    padding: 8px 0 8px 8px;
+    position: relative;
+}
+
+.Note button {
+    float: right;
+    height: 30px;
+    width: 100px;
+    position: relative;
+    margin-top: 30px;
+    margin-right: 10px;
+    color: #33302e;
+    background-color: #f2acb9cc;
+    border: solid;
+    border-color: #3f3733;
+    border-width: 1px;
+}
+
+h2 {
+    font-size: 28px;
+    margin: 0;
+}
+
+h2 a {
+    color: #312d2bd2;
+    display: block;
+    text-decoration: none;
+}
+
+h2 a:hover {
+    color: #0a3a81d2;
+}
+
+.Note_modified {
+    bottom: 8px;
+    color: #33302e;
+    font-size: 12px;
+    position: absolute;
+}
+
+.delete:hover {
+    color: #742647;
+    cursor: pointer;
+}
