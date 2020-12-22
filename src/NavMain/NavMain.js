@@ -1,10 +1,13 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
+import NoteContext from '../NoteContext';
 import './NavMain.css';
 
 class NavMain extends React.Component {
+    static contextType = NoteContext;
+    
     render() {
-        const folders = this.props.folders.map(folder => (
+        const folders = this.context.folders.map(folder => (
             <li key={folder.id}>
                 <NavLink 
                     to={`/folder/${folder.id}`}
@@ -18,7 +21,9 @@ class NavMain extends React.Component {
                 <ul>
                     {folders}
                 </ul>
-                <button className='addFolder'>Add Folder</button>
+                <Link to='/add-folder' class='addFolderLink'>
+                    <button className='addFolder'>Add Folder</button>
+                </Link>
             </div>
         );
     }

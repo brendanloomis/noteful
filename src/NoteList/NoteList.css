@@ -25,3 +25,7 @@
     color: #742647;
     cursor: pointer;
 }
+
+.addNoteLink {
+    text-decoration: none;
+}

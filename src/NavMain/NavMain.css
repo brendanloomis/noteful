@@ -45,3 +45,7 @@
 .NavMain_folder:hover {
     color: #0a3a81d2;
 }
+
+.addFolderLink {
+    text-decoration: none;
+}

@@ -1,10 +1,17 @@
 import React from 'react';
 import Note from '../Note/Note';
+import NoteContext from '../NoteContext';
+import { getNotesForFolder } from '../noteFunctions';
+import { Link } from 'react-router-dom';
 import './NoteList.css';
 
 class NoteList extends React.Component {
+    static contextType = NoteContext;
+
     render() {
-        const notes = this.props.notes.map(note => (
+        const { folderId } = this.props.match.params;
+        const notesForFolder = getNotesForFolder(this.context.notes, folderId)
+        const notes = notesForFolder.map(note => (
             <li key={note.id}>
                 <Note 
                     id={note.id}
@@ -20,7 +27,9 @@ class NoteList extends React.Component {
                     {notes}
                 </ul>
                 <div>
+                    <Link to='/add-note' class='addNoteLink'>
                     <button className='addNote'>Add Note</button>
+                    </Link>
                 </div>
             </div>
         );
