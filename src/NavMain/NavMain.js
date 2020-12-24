@@ -29,8 +29,4 @@ class NavMain extends React.Component {
     }
 }
 
-NavMain.defaultProps = {
-    folders: []
-}
-
 export default NavMain;

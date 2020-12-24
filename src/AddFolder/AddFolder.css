@@ -1,0 +1,40 @@
+.AddFolder {
+    margin-top: 25px;
+    margin-left: 60px;
+    background-color: #d9899ee7;
+    width: 300px;
+    padding: 20px;
+}
+
+.AddFolder h2 {
+    color: #312d2bd2;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-size: 30px;
+}
+
+.AddFolder input {
+    display: block;
+    margin: 10px;
+    font-size: 18px;
+    padding: 5px;
+    width: 250px;
+}
+
+.AddFolder label {
+    padding: 10px;
+    font-size: 20px;
+}
+
+.AddFolder .error {
+    padding: 10px;
+    font-size: 16px;
+    color: rgb(24, 24, 119);
+}
+
+.folder-submit {
+    margin: 10px;
+    font-size: 18px;
+    padding: 5px;
+    background-color: #c9c1c3e7;
+}

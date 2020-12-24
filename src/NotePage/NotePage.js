@@ -2,6 +2,7 @@ import React from 'react';
 import Note from '../Note/Note';
 import NoteContext from '../NoteContext';
 import { findNote } from '../noteFunctions';
+import PropTypes from 'prop-types';
 import './NotePage.css';
 
 class NotePage extends React.Component {
@@ -29,5 +30,14 @@ class NotePage extends React.Component {
         );
     };
 }
+
+NotePage.propTypes = {
+    history: PropTypes.shape({
+        push: PropTypes.func
+    }),
+    match: PropTypes.shape({
+        params: PropTypes.object
+    })
+};
 
 export default NotePage;

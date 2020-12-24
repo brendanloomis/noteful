@@ -3,6 +3,7 @@ import Note from '../Note/Note';
 import NoteContext from '../NoteContext';
 import { getNotesForFolder } from '../noteFunctions';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './NoteList.css';
 
 class NoteList extends React.Component {
@@ -36,8 +37,10 @@ class NoteList extends React.Component {
     };
 }
 
-NoteList.defaultProps = {
-    notes: []
-}
+NoteList.propTypes = {
+    match: PropTypes.shape({
+        params: PropTypes.object
+    })
+};
 
 export default NoteList;

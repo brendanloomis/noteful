@@ -1,6 +1,7 @@
 import React from 'react';
 import NoteContext from '../NoteContext';
 import { findNote, findFolder } from '../noteFunctions';
+import PropTypes from 'prop-types';
 import './NavNotePage.css';
 
 class NavNotePage extends React.Component {
@@ -29,5 +30,14 @@ class NavNotePage extends React.Component {
         );
     };
 }
+
+NavNotePage.propTypes = {
+    history: PropTypes.shape({
+        goBack: PropTypes.func
+    }),
+    match: PropTypes.shape({
+        params: PropTypes.object
+    })
+};
 
 export default NavNotePage;

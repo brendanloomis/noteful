@@ -4,9 +4,13 @@ import { Link } from 'react-router-dom';
 import { format } from 'date-fns';
 import NoteContext from '../NoteContext';
 import config from '../config';
+import PropTypes from 'prop-types';
 
 class Note extends React.Component {
     static defaultProps = {
+        id: '',
+        name: '',
+        modified: '',
         onDeleteNote: () => {}
     }
     static contextType= NoteContext;
@@ -46,7 +50,6 @@ class Note extends React.Component {
                     <Link to={`/note/${this.props.id}`}>
                         {this.props.name}
                     </Link>
-                    {console.log(dateModified)}
                 </h2>
                 <div className='Note_modified'>
                     Modified on {format(dateModified, 'do MMM yyyy')}
@@ -56,5 +59,12 @@ class Note extends React.Component {
         )
     };
 }
+
+Note.propTypes = {
+    id: PropTypes.string,
+    name: PropTypes.string,
+    modified: PropTypes.string,
+    onDeleteNote: PropTypes.func
+};
 
 export default Note;

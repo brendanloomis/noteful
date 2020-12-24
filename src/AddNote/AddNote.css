@@ -1,0 +1,48 @@
+.AddNote {
+    margin-top: 25px;
+    margin-left: 60px;
+    background-color: #d9899ee7;
+    width: 450px;
+    padding: 20px;
+}
+
+.AddNote h2 {
+    color: #312d2bd2;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-size: 30px;
+}
+
+.AddNote input, .AddNote textarea {
+    display: block;
+    margin: 10px;
+    font-size: 18px;
+    padding: 5px;
+    width: 400px;
+}
+
+.AddNote select {
+    display: block;
+    margin: 10px;
+    font-size: 18px;
+    width: 150px;
+    padding: 5px;
+}
+
+.AddNote label {
+    padding: 10px;
+    font-size: 20px;
+}
+
+.AddNote .error {
+    padding: 10px;
+    font-size: 16px;
+    color: rgb(24, 24, 119);
+}
+
+.note-submit {
+    margin: 10px;
+    font-size: 18px;
+    padding: 5px;
+    background-color: #c9c1c3e7;
+}
