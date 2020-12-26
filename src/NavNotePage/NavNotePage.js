@@ -33,10 +33,10 @@ class NavNotePage extends React.Component {
 
 NavNotePage.propTypes = {
     history: PropTypes.shape({
-        goBack: PropTypes.func
+        goBack: PropTypes.func.isRequired
     }),
     match: PropTypes.shape({
-        params: PropTypes.object
+        params: PropTypes.object.isRequired
     })
 };
 

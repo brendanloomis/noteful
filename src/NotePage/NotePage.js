@@ -36,7 +36,7 @@ NotePage.propTypes = {
         push: PropTypes.func
     }),
     match: PropTypes.shape({
-        params: PropTypes.object
+        params: PropTypes.object.isRequired
     })
 };
 

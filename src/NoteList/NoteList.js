@@ -39,7 +39,7 @@ class NoteList extends React.Component {
 
 NoteList.propTypes = {
     match: PropTypes.shape({
-        params: PropTypes.object
+        params: PropTypes.object.isRequired
     })
 };
 

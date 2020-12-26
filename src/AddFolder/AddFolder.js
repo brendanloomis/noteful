@@ -88,7 +88,7 @@ AddFolder.defaultProps = {
 
 AddFolder.propTypes = {
     history: PropTypes.shape({
-        push: PropTypes.func
+        push: PropTypes.func.isRequired
     })
 };
 

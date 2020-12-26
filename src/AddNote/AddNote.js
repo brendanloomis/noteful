@@ -147,7 +147,7 @@ AddNote.defaultProps = {
 
 AddNote.propTypes = {
     history: PropTypes.shape({
-        push: () => {}
+        push: PropTypes.func.isRequired
     })
 };
 
