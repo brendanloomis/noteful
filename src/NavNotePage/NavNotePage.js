@@ -18,7 +18,7 @@ class NavNotePage extends React.Component {
     render() {
         const { noteId } = this.props.match.params;
         const note = findNote(this.context.notes, noteId) || {};
-        const folder = findFolder(this.context.folders, note.folderId);
+        const folder = findFolder(this.context.folders, note.folder_id);
 
         return (
             <div className='NavNotePage'>

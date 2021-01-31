@@ -33,9 +33,9 @@ class AddNote extends React.Component {
         }});
     }
 
-    updateFolderId(folderId) {
-        this.setState({folderId: {
-            value: folderId,
+    updateFolderId(folder_id) {
+        this.setState({folder_id: {
+            value: folder_id,
             touched: true
         }});
     }
@@ -59,15 +59,15 @@ class AddNote extends React.Component {
         const note = {
             name: this.state.name.value,
             content: this.state.content.value,
-            folderId: event.target['note-folder'].value,
+            folder_id: event.target['note-folder'].value,
             modified: new Date()
         };
-        console.log(note.folderId)
         
         fetch(`${config.API_ENDPOINT}/notes`, {
             method: 'POST',
             headers: {
-                'content-type': 'application/json'
+                'content-type': 'application/json',
+                'authorization': `bearer ${config.API_KEY}`
             },
             body: JSON.stringify(note)
         })
@@ -77,6 +77,7 @@ class AddNote extends React.Component {
                         throw error;
                     });
                 }
+                console.log(res);
                 return res.json();
             })
             .then(data => {
@@ -84,7 +85,7 @@ class AddNote extends React.Component {
                 this.props.history.push('/');
             })
             .catch(error => {
-                console.error(error);
+                console.error({ error });
             });
     }
 

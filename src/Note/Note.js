@@ -22,7 +22,8 @@ class Note extends React.Component {
         fetch(`${config.API_ENDPOINT}/notes/${noteId}`, {
             method: 'DELETE',
             headers: {
-                'content-type': 'application/json'
+                'content-type': 'application/json',
+                'authorization': `bearer ${config.API_KEY}`
             }
         })
             .then(res => {
@@ -31,7 +32,6 @@ class Note extends React.Component {
                         throw error;
                     })
                 }
-                return res.json();
             })
             .then(() => {
                 this.props.onDeleteNote(noteId);
@@ -61,7 +61,7 @@ class Note extends React.Component {
 }
 
 Note.propTypes = {
-    id: PropTypes.string.isRequired,
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     name: PropTypes.string.isRequired,
     modified: PropTypes.string.isRequired,
     onDeleteNote: PropTypes.func.isRequired

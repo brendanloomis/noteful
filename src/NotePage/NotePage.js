@@ -8,7 +8,7 @@ import './NotePage.css';
 class NotePage extends React.Component {
     static contextType = NoteContext;
 
-    handleDelete = noteId => {
+    handleDelete = () => {
         this.props.history.push('/');
     }
 
